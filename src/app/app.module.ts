@@ -18,6 +18,8 @@ import { CountDownComponent } from "./components/count-down/count-down.component
 import { HeaderComponent } from "./components/header/header.component";
 import { SidenavService } from "./services/sidenav.service";
 
+import { HomeComponent } from "./pages/home/home.component";
+
 const ANGULAR_MODULES = [
   BrowserModule,
   BrowserAnimationsModule,
@@ -47,9 +49,15 @@ const COMPONENTS = [
   // ...MODALS
 ];
 
+const PAGES = [
+  HomeComponent
+  // HiwComponent,
+  // TreeComponent
+];
+
 @NgModule({
   imports: [...ANGULAR_MODULES, ...MATERIAL_MODULES],
-  declarations: [AppComponent, ...COMPONENTS],
+  declarations: [AppComponent, ...PAGES, ...COMPONENTS],
   providers: [...SERVICE_PROVIDERS],
   bootstrap: [AppComponent]
 })

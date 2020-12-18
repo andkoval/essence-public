@@ -1,0 +1,107 @@
+@import "../../assets/scss/component-base";
+
+.home {
+  &__descr {
+    margin: 0 auto rem-calc(40);
+    max-width: rem-calc(900);
+
+    h1 {
+      margin-bottom: rem-calc(40);
+    }
+
+    p {
+      font-size: rem-calc(20);
+      line-height: rem-calc(28);
+    }
+  }
+
+  &__countdown {
+    display: flex;
+    justify-content: center;
+    margin-bottom: rem-calc(40);
+
+    h2 {
+      margin-top: rem-calc(13);
+      margin-right: rem-calc(20);
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    flex: 1;
+    margin: rem-calc(0 16);
+    text-align: center;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      margin-top: rem-calc(16);
+    }
+
+    &-inner {
+      background-color: $gray;
+      border-radius: rem-calc(8);
+      display: block;
+      padding: rem-calc(20);
+    }
+
+    &-title {
+      h5 {
+        margin-top: 0;
+      }
+    }
+
+    &-emoji {
+      font-size: rem-calc(80);
+      line-height: rem-calc(85);
+    }
+
+    &-stats {
+      margin-top: rem-calc(12);
+
+      p {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+        margin-top: rem-calc(0);
+
+        span.value {
+          color: $primary;
+        }
+      }
+    }
+
+    &-buttons {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &.rare {
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: "Rare";
+        background-color: $primary;
+        position: absolute;
+        top: rem-calc(20);
+        right: rem-calc(-28);
+        transform: rotate(45deg);
+        width: rem-calc(120);
+        z-index: 5;
+      }
+
+      .home__item-inner {
+        opacity: 0.3;
+      }
+    }
+  }
+}

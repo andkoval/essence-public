@@ -1,0 +1,22 @@
+@import "assets/scss/component-base";
+
+.ess-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &__content {
+    flex-grow: 1;
+  }
+}
+
+::ng-deep {
+  .mat-sidenav,
+  .mat-sidenav-content {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .mat-drawer-backdrop.mat-drawer-shown {
+    background-color: rgba($black, 0.2);
+  }
+}

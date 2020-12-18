@@ -1,0 +1,87 @@
+<div class="container home">
+  <div class="home__descr text-center">
+    <h1>Genesis Essences</h1>
+    <p>
+      Stake ALGO tokens to mine base essences from this pool. Base essences can
+      be used to craft more rare items, trade on the open market, or burned for
+      ESSENCE token. The genesis stage will last for a few months for a limited
+      time only, to ensure items scarcity and healthy token's economy.
+    </p>
+  </div>
+
+  <div class="home__countdown">
+    <h2>Available in</h2>
+    <!-- <essence-count-down></essence-count-down> -->
+  </div>
+
+  <!-- Default Emojis -->
+  <div class="home__list">
+    <div
+      class="home__item"
+      *ngFor="let emoji of emojisList"
+      [class.rare]="emoji.rare"
+    >
+      <div class="home__item-inner">
+        <div class="home__item-title">
+          <h5>{{ emoji.name }}</h5>
+        </div>
+        <div class="home__item-emoji">{{ emoji.icon }}</div>
+      </div>
+
+      <ng-container *ngIf="emoji.rare else stackButton">
+        <button mat-flat-button *ngIf="emoji.followLink">Follow</button>
+        <button mat-flat-button *ngIf="emoji.tweetLink" color="tweet">
+          Tweet
+        </button>
+      </ng-container>
+
+      <ng-template #stackButton>
+        <div class="home__item-stats">
+          <p>
+            <span>Staked:</span>
+            <span class="value">{{ emoji.stacked }}</span>
+          </p>
+          <p>
+            <span>Reward:</span>
+            <span class="value">{{ emoji.generated }} / day</span>
+          </p>
+        </div>
+        <button mat-flat-button color="primary" (click)="openStakeModal()">
+          Stake
+        </button>
+      </ng-template>
+    </div>
+  </div>
+
+  <!-- SVG Emojis -->
+  <!-- <div class="home__list">
+    <div class="home__item">
+      <div class="home__item-inner">
+        <img src="/assets/images/emojis/tier1/003-smug.svg" alt="">
+      </div>
+      <button mat-flat-button color="primary" (click)="openStakeModal()">Stake</button>
+    </div>
+    <div class="home__item">
+      <div class="home__item-inner">
+        <img src="/assets/images/emojis/tier1/006-uwu.svg" alt="">
+      </div>
+      <button mat-flat-button color="primary" (click)="openStakeModal()">Stake</button>
+    </div>
+    <div class="home__item">
+      <div class="home__item-inner">
+        <img src="/assets/images/emojis/tier1/007-cheeky.svg" alt="">
+      </div>
+      <button mat-flat-button color="primary" (click)="openStakeModal()">Stake</button>
+    </div>
+    <div class="home__item featured">
+      <div class="home__item-inner">
+        <img src="/assets/images/emojis/tier1/009-yummy.svg" alt="">
+      </div>
+    </div>
+    <div class="home__item featured">
+      <div class="home__item-inner">
+        <img src="/assets/images/emojis/tier1/004-shock.svg" alt="">
+      </div>
+    </div>
+  </div> -->
+</div>
