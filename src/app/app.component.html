@@ -1,0 +1,19 @@
+<mat-sidenav-container>
+
+	<mat-sidenav #sidenav mode="over" position="end" fixedInViewport="true">
+		<!-- <essence-sidenav></essence-sidenav> -->
+	</mat-sidenav>
+
+	<mat-sidenav-content class="ess-root">
+		<essence-header class="ess-root__header"></essence-header>
+
+		<p>content</p>
+
+		<div class="ess-root__content">
+			<router-outlet></router-outlet>
+		</div>
+
+		<!-- <essence-footer class="ess-root__footer"></essence-footer> -->
+	</mat-sidenav-content>
+
+</mat-sidenav-container>

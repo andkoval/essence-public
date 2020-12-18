@@ -1,0 +1,48 @@
+@import "../../assets/scss/component-base";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: rem-calc(40);
+
+  &__logo {
+    align-items: center;
+    display: flex;
+    font-family: $major-mono;
+    color: $white;
+    text-decoration: none;
+
+    .icon {
+      margin-right: rem-calc(8);
+      width: rem-calc(40);
+    }
+  }
+
+  &__right {
+    align-items: center;
+    display: flex;
+  }
+
+  &__balance {
+    align-items: center;
+    display: flex;
+    margin-right: rem-calc(20);
+
+    span {
+      font-size: rem-calc(14);
+    }
+
+    span.highl {
+      font-family: $major-mono;
+      font-size: rem-calc(16);
+      color: #212121;
+      margin-left: rem-calc(4);
+      text-transform: uppercase;
+
+      .icon {
+        margin-left: rem-calc(4);
+        width: rem-calc(12);
+      }
+    }
+  }
+}

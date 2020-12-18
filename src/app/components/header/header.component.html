@@ -1,0 +1,21 @@
+<mat-toolbar color="primary" class="header">
+  <a class="header__logo" [routerLink]="['/']">
+    <img src="/assets/images/logo.svg" alt="" class="icon" />
+    <span>Essence Supply</span>
+  </a>
+  <div class="header__nav">
+    <button mat-button [routerLink]="['/how-it-works']">How it works</button>
+    <button mat-button [routerLink]="['/tree']">Emojis Tree</button>
+  </div>
+  <div class="header__right">
+    <div class="header__balance">
+      <span>Balance:</span>
+      <span class="highl"
+        >967<img src="/assets/images/mineral.svg" alt="" class="icon"
+      /></span>
+    </div>
+    <button mat-icon-button (click)="openSidenav()">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
