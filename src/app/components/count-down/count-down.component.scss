@@ -1,0 +1,39 @@
+@import "../../assets/scss/component-base";
+
+.cd {
+  display: flex;
+
+  &__item {
+    margin: rem-calc(0 12);
+    text-align: center;
+
+    .value {
+      background-color: $gray-dark;
+      border-radius: rem-calc(4);
+      display: block;
+      font-family: $major-mono;
+      font-size: rem-calc(40);
+      height: rem-calc(56);
+      line-height: 1;
+      margin-bottom: rem-calc(8);
+      padding: rem-calc(8);
+      width: rem-calc(78);
+    }
+
+    .descr {
+      display: inline-block;
+      font-size: rem-calc(14);
+      position: relative;
+      padding-right: rem-calc(12);
+
+      &::after {
+        content: "(s)";
+        color: $primary;
+        font-size: rem-calc(10);
+        position: absolute;
+        top: rem-calc(-5);
+        right: rem-calc(-4);
+      }
+    }
+  }
+}

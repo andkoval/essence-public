@@ -45,7 +45,7 @@ const SERVICE_PROVIDERS = [SidenavService];
 // const MODALS = [StakeModalComponent];
 
 const COMPONENTS = [
-  // CountDownComponent,
+  CountDownComponent,
   FooterComponent,
   HeaderComponent
   // SidenavComponent,
