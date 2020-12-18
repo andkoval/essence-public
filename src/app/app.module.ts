@@ -18,10 +18,13 @@ import { SidenavService } from "./services/sidenav.service";
 import { CountDownComponent } from "./components/count-down/count-down.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { HeaderComponent } from "./components/header/header.component";
+import { SidenavComponent } from "./components/sidenav/sidenav.component";
 
 import { StakeModalComponent } from "./components/stake-modal/stake-modal.component";
 
 import { HomeComponent } from "./pages/home/home.component";
+import { HiwComponent } from "./pages/hiw/hiw.component";
+import { TreeComponent } from "./pages/tree/tree.component";
 
 const ANGULAR_MODULES = [
   BrowserModule,
@@ -48,15 +51,11 @@ const COMPONENTS = [
   CountDownComponent,
   FooterComponent,
   HeaderComponent,
-  // SidenavComponent,
+  SidenavComponent,
   ...MODALS
 ];
 
-const PAGES = [
-  HomeComponent
-  // HiwComponent,
-  // TreeComponent
-];
+const PAGES = [HomeComponent, HiwComponent, TreeComponent];
 
 @NgModule({
   imports: [...ANGULAR_MODULES, ...MATERIAL_MODULES],

@@ -14,31 +14,31 @@ export class HomeComponent implements OnInit {
       icon: "🔥",
       name: "Fire",
       stacked: 1255,
-      generated: 19213
+      reward: 19213
     },
     {
       icon: "💧",
       name: "Water",
       stacked: 4355,
-      generated: 25355
+      reward: 25355
     },
     {
       icon: "🌈",
       name: "Rainbow",
       stacked: 23345,
-      generated: 53256
+      reward: 53256
     },
     {
       icon: "🌪",
       name: "Wind",
       stacked: 23452,
-      generated: 43455
+      reward: 43455
     },
     {
       icon: "🎈",
       name: "Baloon",
       stacked: 0,
-      generated: 0,
+      reward: 0,
       rare: true,
       followLink: true
     },
@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
       icon: "💎",
       name: "Diamond",
       stacked: 0,
-      generated: 0,
+      reward: 0,
       rare: true,
       tweetLink: true
     }

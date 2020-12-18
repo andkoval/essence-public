@@ -1,16 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'essence-sidenav',
-  templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.sass']
+  selector: "essence-sidenav",
+  templateUrl: "./sidenav.component.html",
+  styleUrls: ["./sidenav.component.scss"]
 })
 export class SidenavComponent implements OnInit {
   panelOpenState = false;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

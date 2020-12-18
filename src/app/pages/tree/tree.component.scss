@@ -1,0 +1,33 @@
+@import "../../assets/scss/component-base";
+
+.tree {
+  &__section {
+    margin-bottom: rem-calc(40);
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    background-color: $gray;
+    border-radius: rem-calc(8);
+    font-size: rem-calc(50);
+    line-height: rem-calc(52);
+    margin-right: rem-calc(16);
+    margin-bottom: rem-calc(16);
+    text-align: center;
+    padding: rem-calc(12);
+    width: rem-calc(80);
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    svg {
+      width: 100%;
+    }
+  }
+}
