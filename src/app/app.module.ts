@@ -13,10 +13,13 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
 
-import { StakeModalComponent } from "./components/stake-modal/stake-modal.component";
-import { CountDownComponent } from "./components/count-down/count-down.component";
-import { HeaderComponent } from "./components/header/header.component";
 import { SidenavService } from "./services/sidenav.service";
+
+import { CountDownComponent } from "./components/count-down/count-down.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { HeaderComponent } from "./components/header/header.component";
+
+import { StakeModalComponent } from "./components/stake-modal/stake-modal.component";
 
 import { HomeComponent } from "./pages/home/home.component";
 
@@ -43,9 +46,9 @@ const SERVICE_PROVIDERS = [SidenavService];
 
 const COMPONENTS = [
   // CountDownComponent,
+  FooterComponent,
   HeaderComponent
   // SidenavComponent,
-  // FooterComponent,
   // ...MODALS
 ];
 
