@@ -42,14 +42,14 @@ const MATERIAL_MODULES = [
 
 const SERVICE_PROVIDERS = [SidenavService];
 
-// const MODALS = [StakeModalComponent];
+const MODALS = [StakeModalComponent];
 
 const COMPONENTS = [
   CountDownComponent,
   FooterComponent,
-  HeaderComponent
+  HeaderComponent,
   // SidenavComponent,
-  // ...MODALS
+  ...MODALS
 ];
 
 const PAGES = [
@@ -61,6 +61,7 @@ const PAGES = [
 @NgModule({
   imports: [...ANGULAR_MODULES, ...MATERIAL_MODULES],
   declarations: [AppComponent, ...PAGES, ...COMPONENTS],
+  entryComponents: [...MODALS],
   providers: [...SERVICE_PROVIDERS],
   bootstrap: [AppComponent]
 })

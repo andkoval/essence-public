@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'essence-stake-modal',
-  templateUrl: './stake-modal.component.html',
-  styleUrls: ['./stake-modal.component.sass']
+  selector: "essence-stake-modal",
+  templateUrl: "./stake-modal.component.html",
+  styleUrls: ["./stake-modal.component.scss"]
 })
 export class StakeModalComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

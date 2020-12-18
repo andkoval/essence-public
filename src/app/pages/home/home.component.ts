@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { MatDialog } from "@angular/material/dialog";
+import { MatDialog, MatDialogRef } from "@angular/material/dialog";
+import { StakeModalComponent } from "../../components/stake-modal/stake-modal.component";
 
 @Component({
   selector: "essence-home",
@@ -7,6 +8,7 @@ import { MatDialog } from "@angular/material/dialog";
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
+  stakeModalRef: MatDialogRef<StakeModalComponent>;
   public emojisList = [
     {
       icon: "🔥",
@@ -56,5 +58,15 @@ export class HomeComponent implements OnInit {
 
   public openStakeModal(): void {
     // this.dialog.open(StakeModalComponent);
+
+    this.stakeModalRef = this.dialog.open(StakeModalComponent, {
+      width: "800px"
+    });
+
+    this.stakeModalRef.afterClosed().subscribe(res => {
+      if (res == true) {
+        console.log("modal closed");
+      }
+    });
   }
 }
